@@ -14,14 +14,15 @@ int main() {
     
 
     while (num1 < num2); {
-        printf("digite o primeiro numero\n");
-        scanf("%d", &num1);
-        printf("digite o segundo numeoro\n");
-        scanf("%d", &num2);
         if (tentativas > 0); {
             tentativas = MAX_REPET; - qtdrepet;
-            printf("numero de tentativas\n", qtdrepet);
+            
             qtdrepet = qtdrepet + 1;
+            printf("digite o primeiro numero\n");
+            scanf("%d", &num1);
+            printf("digite o segundo numeoro\n");
+            scanf("%d", &num2);
+            printf("numero de tentativas %d\n", qtdrepet);
         
     }
     }

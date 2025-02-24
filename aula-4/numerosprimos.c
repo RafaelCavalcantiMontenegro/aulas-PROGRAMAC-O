@@ -8,4 +8,4 @@ int main() {
     printf("digite o primeiro numero\n");
     scanf("%d", &num1);
 
-while ( num1 )
+while (num1)
