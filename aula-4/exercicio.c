@@ -13,8 +13,8 @@ int main() {
     scanf("%d", &num2);
     
 
-    while (num1 < num2); {
-        if (tentativas > 0); {
+    while (num1 < num2) {
+        if (tentativas > 0) {
             tentativas = MAX_REPET; - qtdrepet;
             
             qtdrepet = qtdrepet + 1;
@@ -24,7 +24,7 @@ int main() {
             scanf("%d", &num2);
             printf("numero de tentativas %d\n", qtdrepet);
         
-    }
+        }
     }
     
 
