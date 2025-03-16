@@ -7,7 +7,7 @@ int main() {
     int menor;  
 
     
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 1000; i+= 1) {
         printf("Digite um número: ");
         scanf("%d", &numero[i]);
 
@@ -24,7 +24,7 @@ int main() {
 
     
     menor = numero[0];  
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i < 1000; i += 1 ) {
         if (numero[i] < menor) {
             menor = numero[i];  
         }
