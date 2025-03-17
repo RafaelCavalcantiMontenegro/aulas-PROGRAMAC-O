@@ -11,7 +11,7 @@ int main() {
     printf("Quantas pessoas serao entrevistadas? ");
     scanf("%d", &num_pessoas);
     
-    for (int i = 0; i < num_pessoas; i++) {
+    for (int i = 0; i < num_pessoas; i+= 1) {
         printf("\nPessoa %d:\n", i + 1);
         
         printf("Sexo (M/F): ");
