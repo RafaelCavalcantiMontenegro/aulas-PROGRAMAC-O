@@ -31,7 +31,7 @@ void imprimirVetor(int v[QTD]) {
 }
 //essa função só é utlizada se o vetor estiver ordenado
 int buscarMelhorada(int v[QTD], int x) {
-  while (i < QTD && v[i] < x) {
+  while (int i < QTD && v[i] < x) {
     i += 1;
   }
   if (i < QTD && v[i] == x) {
