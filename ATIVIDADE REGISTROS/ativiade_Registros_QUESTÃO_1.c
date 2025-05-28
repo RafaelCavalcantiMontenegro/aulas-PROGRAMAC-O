@@ -47,18 +47,38 @@ void MenorEMaior(Estados coleta[], int *menor, int *maior) {
 
 //LETRA C
 float Percentual(Estados estado) {
-    if (estado.veiculos == 0) return 0; // Avoid division by zero
+    if (estado.veiculos == 0) return 0; 
     return (estado.acidentes * 100.0) / estado.veiculos;
 }
 
 //LETRA D
 
-int MediaAcidentes(Estados )
+int MediaAcidentes(Estados coleta[]) {
+    int media = 0;
+    for (int i = 0; i < ESTADOS; i +=1) {
+        media +=coleta[i].acidentes;
+    
+    }
+    return media / ESTADOS;
+}
+
+//LETRA E
+void ACIMA_MediaAcidentes(Estados coleta[], int media) {
+    for (int i = 0; i < ESTADOS; i +=1) {
+        if (coleta[i].acidentes > media) {
+            printf("%s está acima da média de acidentes",coleta[i].nomes);
+        }
+    
+    }
+}
+
 
 int main() {
     Estados coleta[ESTADOS];
     int menor, maior;
-
+    int media;
+    
+    
     NOMES_ESTADOS(coleta);
     MenorEMaior(coleta, &menor, &maior);
 
@@ -70,6 +90,14 @@ int main() {
         float porcentagem = Percentual(coleta[i]);
         printf("%s: %.2f%%\n", coleta[i].nomes, porcentagem);
     }
+
+    media = MediaAcidentes(coleta);
+
+    printf("MEDIA DE ACIDENTES: %d\n", media);
+    
+    ACIMA_MediaAcidentes(coleta, media);
+
+
 
     return 0;
 }
