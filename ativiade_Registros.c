@@ -3,26 +3,26 @@
 
 #define ESTADOS 26
 
-
-
 typedef struct {
     char nomes[40];
     int acidentes;
     int veiculos;
-}Estados;
+} Estados;
 
-// QUESTÃO 1 LETRA A
+
+//LETRA A
 
 void NOMES_ESTADOS(Estados coleta[]) {
-    char lista_de_estados[ESTADOS][40] = {"Acre", "Alagoas", "Amapa", "Amazonas", "Bahia", "Ceara",
+    char lista_de_estados[ESTADOS][40] = {
+        "Acre", "Alagoas", "Amapa", "Amazonas", "Bahia", "Ceara",
         "Espirito Santo", "Goias", "Maranhao", "Mato Grosso", "Mato Grosso do Sul",
         "Minas Gerais", "Para", "Paraiba", "Parana", "Pernambuco", "Piaui", "Rio de Janeiro",
         "Rio Grande do Norte", "Rio Grande do Sul", "Rondonia", "Roraima", "Santa Catarina", "Sao Paulo",
         "Sergipe", "Tocantins"
     };
 
-    for (int i = 0; i < ESTADOS; i += 1) {
-        strcpy(coleta[i].nomes, lista_de_estados[i] );
+    for (int i = 0; i < ESTADOS; i++) {
+        strcpy(coleta[i].nomes, lista_de_estados[i]);
         printf("--- Estado: %s\n", coleta[i].nomes);
         printf("--- Veículos: ");
         scanf("%d", &coleta[i].veiculos);
@@ -31,31 +31,29 @@ void NOMES_ESTADOS(Estados coleta[]) {
     }
 }
 
-//QUESTÃO 1 LETRA B
-
+//LETRA B
 void MenorEMaior(Estados coleta[], int *menor, int *maior) {
-    
     *menor = 0;
     *maior = 0;
-    for (int i = 1; i < ESTADOS; i +=1 ) {
+    for (int i = 1; i < ESTADOS; i++) {
         if (coleta[i].acidentes > coleta[*maior].acidentes) {
             *maior = i;
         }
-
-        if (coleta[i].acidentes > coleta[*menor].acidentes) {
+        if (coleta[i].acidentes < coleta[*menor].acidentes) {
             *menor = i;
         }
-
     }
 }   
 
-//QUESTÃO 1 LETRA C
-
-float Percentual(Estados coleta) {
-    return (coleta.acidentes * 100.0) / coleta.veiculos;
+//LETRA C
+float Percentual(Estados estado) {
+    if (estado.veiculos == 0) return 0; // Avoid division by zero
+    return (estado.acidentes * 100.0) / estado.veiculos;
 }
 
+//LETRA D
 
+int MediaAcidentes(Estados )
 
 int main() {
     Estados coleta[ESTADOS];
@@ -64,8 +62,14 @@ int main() {
     NOMES_ESTADOS(coleta);
     MenorEMaior(coleta, &menor, &maior);
 
+    printf("%s é o estado com menor numero de acidentes: %d\n", coleta[menor].nomes, coleta[menor].acidentes);
+    printf("%s é o estado com maior numero de acidentes: %d\n", coleta[maior].nomes, coleta[maior].acidentes);
 
-    printf("%s é o estado com menor numero de acidentes: %d", coleta[menor].nomes, menor);
+    printf("\nPercentual de acidentes por veículo em cada estado:\n");
+    for (int i = 0; i < ESTADOS; i++) {
+        float porcentagem = Percentual(coleta[i]);
+        printf("%s: %.2f%%\n", coleta[i].nomes, porcentagem);
+    }
 
     return 0;
 }
