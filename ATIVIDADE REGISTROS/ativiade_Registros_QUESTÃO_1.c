@@ -24,10 +24,8 @@ void NOMES_ESTADOS(Estados coleta[]) {
     for (int i = 0; i < ESTADOS; i++) {
         strcpy(coleta[i].nomes, lista_de_estados[i]);
         printf("--- Estado: %s\n", coleta[i].nomes);
-        printf("--- Veículos: ");
-        scanf("%d", &coleta[i].veiculos);
-        printf("--- Acidentes: ");
-        scanf("%d", &coleta[i].acidentes);
+        scanf("%d\n", &coleta[i].veiculos);
+        scanf("%d\n", &coleta[i].acidentes);
     }
 }
 
