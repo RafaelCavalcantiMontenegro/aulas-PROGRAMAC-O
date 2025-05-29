@@ -14,6 +14,28 @@ typedef struct {
 Produto estoque[MAX_PRODUTOS];
 int total_produtos = 0;
 
+void inicializarEstoque() {
+    // Produto 1
+    estoque[0].codigo = 1001;
+    strcpy(estoque[0].descricao, "Lapis HB");
+    estoque[0].valor_unitario = 1.20;
+    estoque[0].quantidade_estoque = 100;
+    
+    // Produto 2
+    estoque[1].codigo = 1002;
+    strcpy(estoque[1].descricao, "Borracha branca");
+    estoque[1].valor_unitario = 0.80;
+    estoque[1].quantidade_estoque = 50;
+    
+    // Produto 3
+    estoque[2].codigo = 1003;
+    strcpy(estoque[2].descricao, "Caderno 200 folhas");
+    estoque[2].valor_unitario = 25.90;
+    estoque[2].quantidade_estoque = 30;
+    
+    total_produtos = 3;
+}
+
 // LETRA A
 void cadastrarProduto() {
     if (total_produtos >= MAX_PRODUTOS) {
@@ -93,7 +115,7 @@ int informarEstoque(int codigo) {
     return -1; 
 }
 
-// LETRA E
+// LETRA E - CORRIGIDA
 void realizarVenda() {
     int codigo, quantidade;
     printf("\n--- Realizar Venda ---\n");
@@ -158,6 +180,7 @@ void exibirMenu() {
 
 int main() {
     int opcao;
+    inicializarEstoque();
     
     do {
         exibirMenu();

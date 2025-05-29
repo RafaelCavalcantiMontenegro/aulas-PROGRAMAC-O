@@ -21,11 +21,17 @@ void NOMES_ESTADOS(Estados coleta[]) {
         "Sergipe", "Tocantins"
     };
 
-    for (int i = 0; i < ESTADOS; i++) {
+    for (int i = 0; i < ESTADOS; i+=1) {
         strcpy(coleta[i].nomes, lista_de_estados[i]);
-        printf("--- Estado: %s\n", coleta[i].nomes);
         scanf("%d\n", &coleta[i].veiculos);
         scanf("%d\n", &coleta[i].acidentes);
+        
+    }
+
+    for (int i = 0; i < ESTADOS; i+=1) {
+        printf("--- Estado: %s\n", coleta[i].nomes);
+        printf("--- veiculos: %d\n ", coleta[i].veiculos);
+        printf("--- acidentes: %d\n ", coleta[i].acidentes);
     }
 }
 
@@ -64,7 +70,7 @@ int MediaAcidentes(Estados coleta[]) {
 void ACIMA_MediaAcidentes(Estados coleta[], int media) {
     for (int i = 0; i < ESTADOS; i +=1) {
         if (coleta[i].acidentes > media) {
-            printf("%s está acima da média de acidentes",coleta[i].nomes);
+            printf("%s está acima da média de acidentes\n",coleta[i].nomes);
         }
     
     }
@@ -84,6 +90,7 @@ int main() {
     printf("%s é o estado com maior numero de acidentes: %d\n", coleta[maior].nomes, coleta[maior].acidentes);
 
     printf("\nPercentual de acidentes por veículo em cada estado:\n");
+
     for (int i = 0; i < ESTADOS; i++) {
         float porcentagem = Percentual(coleta[i]);
         printf("%s: %.2f%%\n", coleta[i].nomes, porcentagem);
