@@ -1,0 +1,12 @@
+POLIMORFISMO:
+é a capacidade de um objeto poder ser referenciado de diversas maneiras diferentes.
+
+sobre-escrita:
+um metodo da subclasse substitui o metodo da superclasse com a mesma assinatura
+
+sobrecarga:
+quando um unico objeto possui varias identidades como diferentes parametros
+
+Upcasting: refencia da superclasse aponta para objeto DE subclasse
+Ligação dinâmica: O metodo chmado é determinado em tempo de execução
+

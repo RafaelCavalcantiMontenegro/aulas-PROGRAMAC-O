@@ -1,0 +1,4 @@
+herança benefícios:
+
+é um relacionamento de tipo "é um, é uma"
+
