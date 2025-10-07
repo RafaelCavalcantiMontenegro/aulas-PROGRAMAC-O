@@ -1,0 +1,22 @@
+Tratamento:
+
+oq são exceções?
+
+entradas invalidas
+falha de hardware
+arquivo não encontrado 
+falha de calculo
+
+catch:
+
+erros capturados
+
+ERROS: problemas graves ou inrecuperaveis
+EXCEÇÃO: condições anormais menos problematicas ou recuperaveis
+
+sintaxe:
+
+try: 
+catch: avisa o erro para o programador
+throw
+finally: finalizar a operação

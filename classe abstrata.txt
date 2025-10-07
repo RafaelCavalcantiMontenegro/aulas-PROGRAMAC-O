@@ -1,7 +1,0 @@
-não irá ter implementação nessas classes
-
-não pode ser instanciada diretamente
-
-força subclasse a implementarem comportamentos específicos
-
-permite reuso de código

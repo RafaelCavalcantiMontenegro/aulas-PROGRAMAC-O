@@ -1,0 +1,23 @@
+INTERFACE:
+
+impletementar a interface é seguir tudo oque o implementado diz;
+
+public class Produto implements Pagavel {
+
+}
+
+public interface {
+    
+}
+
+a classe Produto, terá que desenvolver o método do implemento,
+nesse caso o pagamento dos produtos
+
+INTERFACE:
+
+herana multipla;
+todos os metodos são implementados como PUBLIC;
+não podem ter construtores;
+desde Java 8 podem ter metodos implementados.
+
+
